@@ -31,3 +31,8 @@
 *.out
 *.app
 *.aps
+*.log
+*.tlog
+*.idb
+*.pdb
+*.res
