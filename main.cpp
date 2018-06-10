@@ -3,7 +3,7 @@
 #include <ctime>//产生随机数用  ，可以产生一个种子。
 #include <conio.h>//getch使用的库
 #include <cmath>
-#include <iomanip>//setw()函数使用的库（主函数里用不到了）
+#include <iomanip>//setw()函数使用的库
 //#include <windows.h>//
 
 #include "moeneko.h"//函数声明
@@ -37,25 +37,25 @@ int main(){
 			displayout(a, 0);
 			cout << endl;
 			cout << "游戏结束，请按任意键退出" << endl;
-			getchar(); getchar();
+			_getch();
 			break;
 		}
 		else {
 			displayout(a, 0);
 		}
 		cout << endl << "请输入wasd代表方向" << endl;
+		wasd = 'o';
 		wasd = _getch();
 		switch (wasd) {
-		case('w'):up(a); putin(a, 1); break;
-		case('a'):left(a); putin(a, 1); break;
-		case('s'):down(a);putin(a, 1); break;
-		case('d'):right(a);putin(a, 1); break;
+		case ('w'):up(a); putin(a, 1); break;
+		case ('a'):left(a); putin(a, 1); break;
+		case ('s'):down(a);putin(a, 1); break;
+		case ('d'):right(a);putin(a, 1); break;
 		default:
 			cout << "输入错误，请输入“w”“a”“s”“d”" << endl;
 			_getch();
 			break;
 		}
-		wasd = 'o';
 		//system("pause");
 	}
 	return 0;
