@@ -14,3 +14,4 @@ void right(int(*a)[4]);
 void xtoy(int(*a)[4]);
 void xtox(int(*a)[4]);
 void ytoy(int(*a)[4]);
+bool gameover(int(*a)[4]);

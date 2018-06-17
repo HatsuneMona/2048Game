@@ -19,7 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="diaplay.cpp" />
+    <ClCompile Include="gameover.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="play.cpp" />
+    <ClCompile Include="random.cpp" />
+    <ClCompile Include="swap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="moeneko.h" />
