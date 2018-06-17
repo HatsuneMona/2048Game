@@ -14,15 +14,18 @@ using namespace std;
 
 /*/////////////////////////////////////////////////////////////////////////////
 
-.			函数	名称：游戏空位检查器   bool vacancy(int a[][4])
-.					作用：判断游戏中是否有空位。
+.			函数	名称：游戏结束主函数   bool gameover(int a[][4])
+.					作用：判断游戏是否可以继续运行。
 .					输入值：1.需要判断的4*4的数组
 .					类型：bool
 .					返回值：  0 = fause（游戏可以继续）     或      1 = ture（游戏失败）。
 
 *//////////////////////////////////////////////////////////////////////////////
 bool gameover(int a[][4]) {
-	if (!gameoverleft(a) || !gameoverup(a)) {
+	int NS, EW;
+	NS = gameoverup(a);
+	EW = gameoverleft(a);
+	if (NS == 1 && EW == 1) {
 		return 1;
 	}
 	else {
@@ -51,6 +54,9 @@ bool gameoverleft(int a[][4]) {
 			}
 		}
 	}
+	else {
+		return 0;
+	}
 	return 1;
 }
 
@@ -75,6 +81,9 @@ bool gameoverup(int a[][4]) {
 			}
 		}
 	}
+	else {
+		return 0;
+	}
 	return 1;
 }
 
@@ -85,18 +94,17 @@ bool gameoverup(int a[][4]) {
 .					作用：判断游戏中是否有空位。
 .					输入值：1.需要判断的4*4的数组
 .					类型：bool
-.					返回值：  0 = fause（没有空位）     或      1 = ture（还有空位）。
+.					返回值：  0 = fause（有空位）     或      1 = ture（没有空位）。
 
 *//////////////////////////////////////////////////////////////////////////////
-
 bool vacancy(int a[][4]) {
 	int x, y;
 	for (y = 0; y < 4; y++) {
 		for (x = 0; x < 4; x++) {
 			if (a[y][x] == 0) {//判断还有没有空位了
-				return 1;//如果还有空位，则游戏可以继续运行
+				return 0;//如果还有空位，则游戏可以继续运行
 			}
 		}
 	}
-	return 0;
+	return 1;
 }

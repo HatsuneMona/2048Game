@@ -21,22 +21,27 @@ using namespace std;
 *//////////////////////////////////////////////////////////////////////////////
 int main(){
 	srand(time(0));//为后续的随机函数   设定随机数种子
-	int a[4][4] = { 1,2,3,4,5,6,7,8,9,8,21,2,5,4,3,2 }, cycle;
-	char wasd;
-	cycle = 0;
 
-	//初始化游戏数据   开始
-	if (cycle == 0) {
-		//putin(a, suiji(2, 3));
-		//以下是测试用数据
-		cycle++;
-	}
-	//初始化游戏数据   结束
+	int a[4][4] = { 0 };//正式数据
+	int last[4][4];
+	int cycle = 0;
+	int score;
+	int new_num;
+	char wasd;
+
+	putin(a, suiji(2, 3));//初始化游戏数据(给出初始值）
 
 	while (1){
-		if (cycle != 1) {
+
+
+		score = fun_score(a, &cycle, last);
+
+
+		if (cycle > 0) {
 			_getch();//清空键盘缓存区
 		}
+
+
 		if (gameover(a)) {
 			displayout(a, 0);
 			cout << endl;
@@ -44,29 +49,26 @@ int main(){
 			_getch();
 			break;
 		}
-		//if (gameoverleft(a) == 1 && gameoverup(a) == 1) {//前者判断横向，后者判断纵向。
-		//	displayout(a, 1);
-		//	cout << endl;
-		//	cout << "游戏结束，请按任意键退出" << endl;
-		//	_getch();
-		//	break;
-		//}
 		else {
-			displayout(a, 1);
+			displayout(a, 0);
+			cout << endl << score << endl;
 		}
+
+
 		cout << endl << "请输入wasd代表方向" << endl;
 		wasd = _getch();
 		switch (wasd) {
 		case ('w'):up(a); putin(a, 1); break;
 		case ('a'):left(a); putin(a, 1); break;
-		case ('s'):down(a);putin(a, 1); break;
-		case ('d'):right(a);putin(a, 1); break;
+		case ('s'):down(a); putin(a, 1); break;
+		case ('d'):right(a); putin(a, 1); break;
 		default:
 			cout << "输入错误，请输入“w”“a”“s”“d”" << endl;
 			_getch();
 			break;
 		}
-		//system("pause");
+
+
 		cycle++;
 	}
 	return 0;

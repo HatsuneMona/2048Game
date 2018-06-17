@@ -65,11 +65,11 @@ int torf() {
 .			函数	名称：方格随机选择器   putin(int(*a)[4],int quantity)
 .					作用：随机指定4*4区域内的一个方格，并且判断方格是否为空，如果为空，则输入2或者4
 .					输入值：1.指定的4*4的方格		2.要指定输入的方格的数量
-.					类型：void
-.					返回值：无。
+.					类型：int
+.					返回值：随机产生的数的值。
 
 *//////////////////////////////////////////////////////////////////////////////
-void putin(int(*a)[4], int quantity) {
+int putin(int(*a)[4], int quantity) {
 	int x, y, j;
 	for (j = 1; j <= quantity; j++) {
 		while (1) {
@@ -77,7 +77,7 @@ void putin(int(*a)[4], int quantity) {
 			y = suiji(4);
 			if (a[y][x] == 0) {
 				a[y][x] = torf();
-				break;
+				return a[y][x];
 			}
 		}
 	}
