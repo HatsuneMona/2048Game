@@ -30,7 +30,7 @@
     <ClCompile Include="play.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="diaplay.cpp">
+    <ClCompile Include="display.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

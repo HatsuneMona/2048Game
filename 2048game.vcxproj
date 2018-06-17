@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="diaplay.cpp" />
+    <ClCompile Include="display.cpp" />
     <ClCompile Include="gameover.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="play.cpp" />
