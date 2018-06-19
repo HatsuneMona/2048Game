@@ -25,22 +25,18 @@ int main(){
 	int a[4][4] = { 0 };//正式数据
 	int last[4][4];
 	int cycle = 0;
-	int score;
-	int new_num;
+	int score = 0;
+	int add_score = 0;
 	char wasd;
 
 	putin(a, suiji(2, 3));//初始化游戏数据(给出初始值）
 
 	while (1){
-
-
-		score = fun_score(a, &cycle, last);
-
-
 		if (cycle > 0) {
 			_getch();//清空键盘缓存区
 		}
 
+		score = fun_score(cycle, add_score, score);
 
 		if (gameover(a)) {
 			displayout(a, 0);
@@ -54,20 +50,22 @@ int main(){
 			cout << endl << score << endl;
 		}
 
-
+	wasd_wrong:;//在64行
 		cout << endl << "请输入wasd代表方向" << endl;
 		wasd = _getch();
 		switch (wasd) {
-		case ('w'):up(a); putin(a, 1); break;
-		case ('a'):left(a); putin(a, 1); break;
-		case ('s'):down(a); putin(a, 1); break;
-		case ('d'):right(a); putin(a, 1); break;
+		case ('w'):add_score = up(a); break;
+		case ('a'):add_score = left(a); break;
+		case ('s'):add_score = down(a); break;
+		case ('d'):add_score = right(a); break;
 		default:
 			cout << "输入错误，请输入“w”“a”“s”“d”" << endl;
 			_getch();
+			goto wasd_wrong;//在54行
 			break;
 		}
 
+		putin(a, 1);
 
 		cycle++;
 	}
