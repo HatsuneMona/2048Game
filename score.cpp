@@ -20,11 +20,13 @@ using namespace std;
 
 *//////////////////////////////////////////////////////////////////////////////
 int fun_score(int cycle, int add_score, int score) {
-	if (cycle > 0) {
-		score += add_score;
-	}
-	else {
-		score = 0;
+	if (add_score != -1) {
+		if (cycle > 0) {
+			score += add_score;
+		}
+		else {
+			score = 0;
+		}
 	}
 	return score;
 }

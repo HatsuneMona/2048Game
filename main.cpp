@@ -65,7 +65,9 @@ int main(){
 			break;
 		}
 
-		putin(a, 1);
+		if (add_score != -1) {
+			putin(a, 1);
+		}
 
 		cycle++;
 	}

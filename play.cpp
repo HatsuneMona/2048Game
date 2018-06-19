@@ -22,10 +22,17 @@ using namespace std;
 
 *//////////////////////////////////////////////////////////////////////////////
 int left(int(*a)[4]) {
+	int can_play[4][4];
 	int x = 0, y = 0;
 	int m = 0, n = 0;
 	int i = 0, j = 0, k = 0;
 	int add_score = 0;
+	int judge = 0;
+	for (y = 0; y < 4; y++) {
+		for (x = 0; x < 4; x++) {
+			can_play[y][x] = a[y][x];
+		}
+	}
 	for (y = 0; y < 4; y++) {
 		for (x = 0; x < 4; x++) {
 			if (a[y][x] != 0) {
@@ -66,6 +73,16 @@ int left(int(*a)[4]) {
 				}
 			}
 		}
+	}	
+	for (y = 0; y < 4; y++) {
+		for (x = 0; x < 4; x++) {
+			if (can_play[y][x] == a[y][x]) {
+				judge++;
+			}
+		}
+	}
+	if (judge == 16) {
+		return -1;
 	}
 	return add_score;
 }
