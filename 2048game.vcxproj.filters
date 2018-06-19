@@ -36,6 +36,9 @@
     <ClCompile Include="score.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

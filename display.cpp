@@ -1,12 +1,4 @@
-﻿#include <iostream>
-#include <cstdlib>//产生随机数用    rand()
-#include <ctime>//产生随机数用  ，可以产生一个种子。
-#include <conio.h>//getch使用的库
-#include <cmath>
-#include <iomanip>//setw()函数使用的库
-//#include <windows.h>//
-
-#include "moeneko.h"//函数声明
+﻿#include "moeneko.h"//函数声明
 
 using namespace std;
 
@@ -21,7 +13,7 @@ using namespace std;
 .					返回值：无。
 
 *//////////////////////////////////////////////////////////////////////////////
-void displayout(int a[][4], int clean) {
+void displayout(int a[][4], int score, int clean) {
 	if (clean == 0) {
 		system("CLS");
 	}
@@ -38,5 +30,6 @@ void displayout(int a[][4], int clean) {
 		}
 		cout << endl;
 	}
+	cout << endl << "你获得的分数是：" << score << endl;
 close:;
 }

@@ -1,12 +1,4 @@
-﻿#include <iostream>
-#include <cstdlib>//产生随机数用    rand()
-#include <ctime>//产生随机数用  ，可以产生一个种子。
-#include <conio.h>//getch使用的库
-#include <cmath>
-#include <iomanip>//setw()函数使用的库
-//#include <windows.h>//
-
-#include "moeneko.h"
+﻿#include "moeneko.h"
 
 using namespace std;
 

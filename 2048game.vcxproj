@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="display.cpp" />
     <ClCompile Include="gameover.cpp" />
+    <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="play.cpp" />
     <ClCompile Include="random.cpp" />
