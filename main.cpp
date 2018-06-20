@@ -13,19 +13,13 @@ using namespace std;
 *//////////////////////////////////////////////////////////////////////////////
 int main(){
 	srand(time(0));//为后续的随机函数   设定随机数种子
-
-	int a[4][4] = { 0 };//正式数据
-	int last[4][4];
+	int a[4][4] = { 0 };
 	int cycle = 0;
 	int score = 0;
 	int add_score = 0;
-
 	putin(a, suiji(2, 3));//初始化游戏数据(给出初始值）
-
 	while (1){
-
 		score = fun_score(cycle, add_score, score);
-
 		if (gameover(a)) {
 			displayout(a, score, 0);
 			cout << endl;
@@ -33,17 +27,12 @@ int main(){
 			getchar();
 			break;
 		}
-
 		displayout(a, score, 0);
-		
 		add_score = game_input(a, cycle);
-
 		if (add_score != -1) {
 			putin(a, 1);
 		}
-
 		cycle++;
 	}
 	return 0;
 }
-
