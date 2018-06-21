@@ -7,7 +7,10 @@
 #include <conio.h>//getch使用的库
 #include <cmath>
 #include <iomanip>//setw()函数使用的库
-//#include <windows.h>//没什么用
+
+#include <windows.h>//颜色
+#include <stdio.h>//颜色
+#include <stdlib.h>//颜色
 
 //DISPLAY显示相关
 /*/////////////////////////////////////////////////////////////////////////////

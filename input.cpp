@@ -18,7 +18,7 @@ int game_input(int(*a)[4], int cycle) {
 	char wasd;
 	int add_score = 0;
 wasd_wrong:;//在36行
-	cout << endl << "请输入wasd代表方向" << endl;
+	cout << "请输入wasd代表方向" << endl;
 	wasd = _getch();
 	switch (wasd) {
 	case ('w'):add_score = up(a); break;
