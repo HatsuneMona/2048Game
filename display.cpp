@@ -1,6 +1,4 @@
-﻿
-
-#include "moeneko.h"//函数声明
+﻿#include "moeneko.h"//函数声明
 
 using namespace std;
 

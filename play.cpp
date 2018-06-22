@@ -73,7 +73,7 @@ int left(int(*a)[4]) {
 			}
 		}
 	}
-	if (judge == 16) {
+	if (judge == 16 && add_score != 0) {
 		return -1;
 	}
 	return add_score;
